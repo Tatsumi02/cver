@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>veillez patientez....</title>
+</head>
+<body>
+   <center>
+        <img src="../images/Infinity-1s-200px.gif" />
+        <br />
+         veillez patientez...
+
+        <script type="text/javascript">
+           var temps = 10;
+           var lieu = document.getElementById('c');
+           var compteur = setInterval(function(){ 
+                  
+                  temps--;
+                  //lieu.innerHTML= temps;
+                  if (temps == 0 ) {
+                  	window.location.href="{{ path('modele') }}";
+                  }
+
+            },1000);
+        </script>
+   </center>
+</body>
+</html>

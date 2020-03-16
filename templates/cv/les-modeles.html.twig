@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Choisi ton modele !{% endblock %}
+
+{% block body %}
+   <section class="box feature ">
+   	    <div class="container">
+   	    	<center>
+             <h1>Choix du modele pour votre cv</h1>
+             <p class="col-md-11">
+                  vous devez choisir un modele pour votre cv. mais pour le moment, nous n'avont que un modele disponible mais d'ici peu, d'autres modele seront cree 
+                  <div class="col-md-9 jumbotron" id="cv">
+                   <iframe src="{{ path('modele') }}" width="800" height="900" class="col-md-12" scrolling="yes" frameborder="1"></iframe>
+                     <a href="{{ path('inscription') }}" class="btn btn-primary"> debutons maintenant </a>
+                  </div>
+             </p>
+
+            </center>
+        </div>
+  <br /><br />
+
+   </section>
+ <script type="text/javascript">
+   
+ </script>
+
+{% endblock %}

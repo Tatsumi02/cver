@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Inscrivez vous!{% endblock %}
+
+{% block body %}
+ 
+    <section class="box feature ">
+       <div class="container">
+           <h2>Vous devez cree un compte avant de commencer </h2>
+           <form class="jumbotron" method="post" action="{{ path('save_user') }}">
+             <input type="text" name="nom" placeholder="nom" class="form-control col-md-3" id="in"  />
+             <input type="text" name="prenom" placeholder="prenom" class="form-control col-md-3" id="in"  />
+             <br /><br />
+             <input type="text" name="email" placeholder="email" class="form-control col-md-6" id="in"  />
+             <br /><br />
+             <input type="password" name="password" placeholder="mot de pass" class="form-control col-md-3" id="in"  />
+             <input type="password" name="password2" placeholder="mot de pass (repetition)" class="form-control col-md-3" id="in"  />
+             <br /><br />
+             <button type="submit" class="btn btn-primary col-md-6"> Inscription <span class="fa fa-user"></span></button>
+           </form>
+       </div>
+       <br /><br >
+    </section>
+ <style type="text/css">
+   #in{
+   	display: inline;
+   }
+ </style>
+{% endblock %}

@@ -1,38 +1,105 @@
 {% extends 'base.html.twig' %}
 
 {% block title %} Remplissez votre cv en quelques etapes!{% endblock %}
-
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="../css/cv-form.css">
+{% endblock %}
 {% block body %}
-
+<div id="notifi">
+  <b>{{ app.user.nom |upper }}</b> soyer claire dans votre saisir 
+</div>
     <section class="box feature ">
        <div class="container">
-              <h3> Remplissez votre cv en 6 etapes </h3>
+              
+
               <kbd> etape <span class="badg"> 1/6 </span></kbd>
               <form method="post" action="{{ path('save_cv') }}" enctype="multipart/form-data" class="jumbotron col-md-12" id="">
 
                 
-                <div id="profiler"></div>
+                <div id="profiler col-md-12"></div>
                 <div id="sender"></div>
 
                 <div id="init">
-                  <input type="text" name="nom" class="form-control col-md-5" value="{{ app.user.nom }}" id="in" placeholder="nom" />
-                  <input type="text" name="prenom" class="form-control col-md-5" value="{{ app.user.prenom }}" id="in" placeholder="prenom" />
-                  <br /><br />
-                  <input type="text" name="titre_pro" class="form-control col-md-5" value="" id="in" placeholder="titre professionnel" />
 
-                  <input type="text" name="adresse_post" class="form-control col-md-5" value="" id="in" placeholder="adresse postal" />
+                <fieldset id="f2">
+                    <legend id="l2" class="col-md-3">informations personnelles</legend>
+                  <input type="text" name="nom" class="form-control col-md-6" value="{{ app.user.nom }}" id="in" placeholder="nom" />
+                  <input type="text" name="prenom" class="form-control col-md-5 in" value="{{ app.user.prenom }}" id="in" placeholder="prenom" />
+                  <br /><br />
+                  <input type="text" name="titre_pro" class="form-control col-md-6 in" value="" id="in" placeholder="titre professionnel" />
+
+                  <input type="text" name="adresse_post" class="form-control col-md-5 in" value="" id="in" placeholder="adresse postal" />
                   <br /><br />
 
-                  <input type="text" name="code_post" class="form-control col-md-5" value="" id="in" placeholder="code postal" />
+                  <input type="text" name="code_post" class="form-control col-md-6 in" value="" id="in" placeholder="code postal" />
 
-                  <input type="text" name="phone" class="form-control col-md-5" value="" id="in" placeholder="numero de telephone" />
+                  <input type="text" name="phone" class="form-control col-md-5 in" value="" id="in" placeholder="numero de telephone" />
                   <br /><br />
-                   <input type="email" name="email" class="form-control col-md-10" value="{{ app.user.email }}" id="in" placeholder="email" />
-                      
-                  
+                   <input type="email" name="email" class="form-control col-md-11 in" value="{{ app.user.email }}" id="in" placeholder="email" />
+                </fieldset>
+    <br /><br />
+    <fieldset id="f3">
+   <legend id="l3" class="col-md-3"> Parcours proffessionnelle</legend>
+
+                <input type="text" name="intitule" class="form-control col-md-6 in" value="" id="in" placeholder="intitule de post (ex: chef de projet)" />
+
+                <input type="text" name="ville" class="form-control col-md-5 in" value="" id="in" placeholder="Ville (ex: Douala)" />
+
+                <br /><br />
+
+                date de debut<br /><input type="date" name="date_debut" class="form-control col-md-6 in" value="" id="in" placeholder="date de debut" />
+
+                 <input type="text" name="employeur" class="form-control col-md-5 in" value="" id="in" placeholder="employeur(ex:Kiro game)" />
 
                  <br /><br />
-                 <button class="btn btn-primary col-md-5" type="button" id="etapeur">Etape suivante <span class="fa fa-plus"></span></button>
+
+                 <input type="text" name="departement" class="form-control col-md-11 in" value="" id="in" placeholder="departement (ex: Moungo)" />
+
+                 <br /><br />date de fin<br /><input type="date" name="date_fin" class="form-control col-md-11 in" value="null" id="in" placeholder="" />
+
+                 <br /><input type="checkbox" name="travailActu" id="travailActu" /> <label for="travailActu" style="display:inline;">j'y travaille actuellement </label>
+               
+               <br /><br />
+                    quel etait (ou sont) vos responsabilites <br /> decrivez les dans le champ ci-dessous <br /><br />
+
+                      <textarea name="description_responsabilite" class="form-control col-md-11 in" placeholder="decrivez par tirets ou numero"></textarea><br /><br />
+                      <hr />
+                      <a href="#" class="btn btn-warning "> Ajouter un autre parcours</a>
+        </fieldset>
+        <br /><br />
+                      
+                      <fieldset id="f">
+                        <legend id="l" class="col-md-3"> <h3 style=" display:inline; color:white;">Formation</h3> </legend>
+                       <input type="text" class="form-control col-md-6 in" placeholder="nom de l\'etablisement " name="etablisement" id="in" />
+
+                       <input type="text" class="form-control col-md-5 in" id="in" placeholder="diplome(ex:licence en art)" name="diplome" />
+                       <br />
+
+                       <br /><input type="text" class="form-control col-md-6 in" placeholder="Domaine d\'etude(ex:economie)" name="DomaineEtude" id="in" />
+
+                       <input type="text" class="form-control col-md-5 in" placeholder="zone geographique de l\'etablisement(ex:Douala)" id="in" name="zoneGeographique" /><br /><br />
+
+                       <input type="text" class="form-control col-md-11 in" placeholder="Annee d'obtention(Ex: 2015)" id="in" name="DomaineEtude" />
+                        <hr />
+                          <legend> <a href="#" class="btn btn-warning ">ajouer une autre formation</a> </legend>
+                      </fieldset>
+    <br /><br />
+    <fieldset id="f4">
+      <legend id="l4" class="col-md-4">Note professionnel</legend>
+      Decrivez vos competences dans le champ ci-dessous
+      <textarea name="competences" class="col-md-11 form-control in" placeholder="decrivez en tirets ou en points"></textarea><br /><br />
+                                   
+                              
+        Decrivez votre profile professionnel ci-dessous<br /><br />
+      <textarea name="profilePro" class="col-md-11 form-control in" placeholder="decrivez en tirets ou en points"></textarea><br />
+      <br /> votre photo de profil<input type="file" class="form-control col-md-11 in" name="pdp" /><br />
+     </fieldset>
+      <br />'
+
+
+      <br /><br />
+ <button class="btn btn-primary col-md-5" type="submit" id="etapeur">Voir un appercu de votre cv <span class="fa fa-plus"></span></button>
+
                 </div>
                    
 
@@ -46,124 +113,13 @@
 <style>
   #in{
   	display: inline;
+    height: 70px;
   }
 </style>
-<script type="text/javascript">
-  $(function(){
-        $('#etapeur').click(function(){
-        	$('.badg').text('2/6');
-        	$('#profiler').html(''+
 
-                '<input type="text" name="intitule" class="form-control col-md-5 p" value="" id="in" placeholder="intitule de post (ex: chef de projet)" />'+
-
-                '<input type="text" name="ville" class="form-control col-md-5" value="" id="in" placeholder="Ville (ex: Douala)" />'+
-
-                '<br /><br />'+
-
-                'date de debut<br /><input type="date" name="date_debut" class="form-control col-md-5" value="" id="in" placeholder="date de debut" />'+
-
-                 '<input type="text" name="employeur" class="form-control col-md-5 poste" value="" id="in" placeholder="employeur(ex:Kiro game)" />'+
-
-                 '<br /><br />'+
-
-                 '<input type="text" name="departement" class="form-control col-md-5" value="" id="in" placeholder="departement (ex: Moungo)" />'+
-
-                 '<br /><br />date de fin<br /><input type="date" name="date_fin" class="form-control col-md-5 ta" value="null" id="in" placeholder="" />'+
-
-                 '<br /><input type="checkbox" name="travailActu" id="travailActu" /> <label for="travailActu" style="display:inline;">j\'y travaille actuellement </label>'+
-
-                 '<br /><br /><button type="button" class="btn btn-primary col-md-5 etapeSuiv">Etape suivante <span class="fa fa-plus"></span></button>'+
-
-        		'');
-
- // si l'utilisateur travaille encore actuellement a son derniser lieu de travaille, on execute lafonction suivante.
-           $('#travailActu').click(function(){
-            //on recupere la zone ou on demande la date de fin
-            var df = document.querySelector('.ta');
-             // on desactive cette zone
-             df.disabled = true; 
-           });
-// quand l'utilisateur aura cliquer sur Etape suivante
-   
-   $('#init').css('display','none');
-
-            $('.etapeSuiv').click(function(){
-               $('.badg').text('3/6');
-               var post = $('.poste').val();
-               var p = $('.p').val();
-  
-
-               $('#profiler').html(''+
-                    'quel etait (ou sont) vos responsabilites  en tant que <b> '+ p + '</b> chez <b>'+ post + '</b><br /> decrivez les dans le champ ci-dessous <br /><br />'+
-
-                      '<textarea name="description_responsabilite" class="form-control col-md-5 dr2" placeholder="decrivez par tirets ou numero"></textarea><br /><br />'+
-
-                      '<button type="button" class="btn btn-primary col-md-5 etapeSuiv4">Etape suivante <span class="fa fa-plus"></span></button>'+
-                '');
-
-                $('.etapeSuiv4').click(function(){
-                 $('.badg').text('4/6');
-
-                 $('#profiler').html(''+
-                       '<h3>Votre formation</h3>'+
-                       '<input type="text" class="form-control col-md-5" placeholder="nom de l\'etablisement " name="etablisement" />' +
-
-                       '<br /><input type="text" class="form-control col-md-5" placeholder="diplome(ex:licence en art)" name="diplome" />'+
-
-                       '<br /><input type="text" class="form-control col-md-5" placeholder="Domaine d\'etude(ex:economie)" name="DomaineEtude" />'+
-
-                       '<br /><input type="text" class="form-control col-md-5" placeholder="zone geographique de l\'etablisement(ex:Douala)" name="zoneGeographique" />'+
-
-                       '<br /><input type="text" class="form-control col-md-5" placeholder="Annee d\'obtention(Ex: 2015)" name="DomaineEtude" />' +
-
-                       '<br /><button type="button" class="btn btn-primary col-md-5 etapeSuiv5">Etape suivante <span class="fa fa-plus"></span></button>'
-                    +'');
-
-
-                    
-                         $('.etapeSuiv5').click(function(){
-                               $('.badg').text('5/6');
-
-                               $('#profiler').html(''+
-                                     
-                                   'Decrivez vos competences dans le champ ci-dessous<br /><br />'+
-                                   '<textarea name="competences" class="col-md-5 form-control" placeholder="decrivez en tirets ou en points"></textarea><br /><br />'+
-                                   '<button type="button" class="col-md-5 btn btn-primary etapeSuiv6"> Etape 6 (dernier etape) <span class="fa fa-ok">'
-
-                                +'');
-
-                               $('.etapeSuiv6').click(function(){
-
-                                   $('.badg').text('6/6');
-
-                                   $('#profiler').html(''+
-                                    
-                                       'Decrivez votre profile professionnel ci-dessous<br /><br />'+
-                                       '<textarea name="profilePro" class="col-md-5 form-control" placeholder="decrivez en tirets ou en points"></textarea><br />'+
-                                       '<br /> votre photo de profil<input type="file" class="form-control col-md-5" name="pdp" /><br /><br />'
-
-                                    +'');
-                                    
-                                    var dr = document.querySelector('.dr'), dr2 = document.querySelector('.dr2');
-
-                                    dr.value = dr2.value;
-
-                                    
-                                     
-                               });
-                          });
-
-                    });
+               
+                                   
                    
 
-              });
-                
-            $('#sender').html('<button type="submit" class="col-md-5 btn-lg btn btn-success send"> Envoyer maintenant  <span class="fa fa-send">'
-                                           );
-      });
 
-
-           
-  });
-</script>
 {% endblock %}

@@ -1,0 +1,69 @@
+#f2{
+
+	background: rgb(25,55,44);
+	padding: 2%;
+	border-radius: 9px;
+
+}
+
+#l2{
+
+	background: rgb(3,4,9);
+	padding: 2%;
+	color: white;
+	border-radius: 9px;
+    
+}
+
+#f3{
+
+	background: rgb(2,55,4);
+	padding: 2%;
+	border-radius: 9px;
+	color: white;
+}
+
+#l3{
+
+	background: rgb(32,4,9);
+	padding: 2%;
+	color: white;
+	border-radius: 9px;
+}
+
+#f{
+
+	background: rgb(2,5,4);
+	padding: 2%;
+	border-radius: 9px;
+	color: white;
+}
+
+#l{
+
+	background: rgb(90,4,2);
+	padding: 2%;
+	color: white;
+	border-radius: 9px;
+}
+
+#f4{
+
+	background: rgb(90,0,48);
+	padding: 2%;
+	border-radius: 9px;
+	color: white;
+}
+
+#l4{
+
+	background: rgb(90,4,99);
+	padding: 2%;
+	color: white;
+	border-radius: 9px;
+}
+#notifi{
+	background: orange;
+	color: white;
+	padding: 2%;
+}

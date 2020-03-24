@@ -1,0 +1,32 @@
+
+{% extends 'modele/trou/index.html.twig' %}
+  {% block nomPrenom %}
+     {{ nom |upper }} {{ prenom |upper }}
+  {% endblock %}
+
+  {% block entete %}
+      {{ email }}<br />
+      {{ phone }}
+  {% endblock %}
+
+  {% block competence %}
+        {{ competences |nl2br }}
+  {% endblock %}
+
+  {% block parcoursProf %}
+       {{ intitule }} a
+       {{ ville }} 
+       du {{ date_debut }} au {{ date_fin }} 
+       chez {{ employeur }} dans le departement du {{ departement }} ou je  {{ travail_actu }}.
+       <br />
+       {{ description_respon |nl2br }}
+
+  {% endblock %}
+
+  {% block formation %}
+       j'ai fais mes etudes a {{ etablissement }} ou j'ai obtenu un diplome de {{ diplome }} dans le domaine de {{ domaine_etude }} a {{ zone_geographique }}
+  {% endblock %}
+
+  {%  block profilProf %}
+          {{ profil_prof |nl2br }}
+  {% endblock %}

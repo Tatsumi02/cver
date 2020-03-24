@@ -6,14 +6,14 @@
 {% endblock %}
 {% block body %}
 <div id="notifi">
-  <b>{{ app.user.nom |upper }}</b> soyer claire dans votre saisir 
+  Bienvenue <b>{{ app.user.nom |upper }}</b>. vous pouver tester notre premiere version de cver et nous envoyer vos avis sur cette version. <a href="{{ path('critique') }}" class="btn btn-primary btn-sm">Vous en dites quoi?</a>
 </div>
     <section class="box feature ">
        <div class="container">
               
 
-              <kbd> etape <span class="badg"> 1/6 </span></kbd>
-              <form method="post" action="{{ path('save_cv') }}" enctype="multipart/form-data" class="jumbotron col-md-12" id="">
+             
+       <form method="post" action="{{ path('save_cv') }}" enctype="multipart/form-data" class="jumbotron col-md-12" id="">
 
                 
                 <div id="profiler col-md-12"></div>
@@ -55,14 +55,14 @@
 
                  <input type="text" name="departement" class="form-control col-md-11 in" value="" id="in" placeholder="departement (ex: Moungo)" />
 
-                 <br /><br />date de fin<br /><input type="date" name="date_fin" class="form-control col-md-11 in" value="null" id="in" placeholder="" />
+                 <br /><br />date de fin<br /><input type="date" name="date_fine" class="form-control col-md-11 in" value="" id="in" placeholder="" />
 
                  <br /><input type="checkbox" name="travailActu" id="travailActu" /> <label for="travailActu" style="display:inline;">j'y travaille actuellement </label>
                
                <br /><br />
                     quel etait (ou sont) vos responsabilites <br /> decrivez les dans le champ ci-dessous <br /><br />
 
-                      <textarea name="description_responsabilite" class="form-control col-md-11 in" placeholder="decrivez par tirets ou numero"></textarea><br /><br />
+                      <textarea name="description_respon" class="form-control col-md-11 in" placeholder="decrivez par tirets ou numero"></textarea><br /><br />
                       <hr />
                       <a href="#" class="btn btn-warning "> Ajouter un autre parcours</a>
         </fieldset>
@@ -75,11 +75,11 @@
                        <input type="text" class="form-control col-md-5 in" id="in" placeholder="diplome(ex:licence en art)" name="diplome" />
                        <br />
 
-                       <br /><input type="text" class="form-control col-md-6 in" placeholder="Domaine d\'etude(ex:economie)" name="DomaineEtude" id="in" />
+                       <br /><input type="text" class="form-control col-md-6 in" placeholder="Domaine d\'etude(ex:economie)" name="domaine_etude" id="in" />
 
-                       <input type="text" class="form-control col-md-5 in" placeholder="zone geographique de l\'etablisement(ex:Douala)" id="in" name="zoneGeographique" /><br /><br />
+                       <input type="text" class="form-control col-md-5 in" placeholder="zone geographique de l\'etablisement(ex:Douala)" id="in" name="zone_geographique" /><br /><br />
 
-                       <input type="text" class="form-control col-md-11 in" placeholder="Annee d'obtention(Ex: 2015)" id="in" name="DomaineEtude" />
+                       <input type="text" class="form-control col-md-11 in" placeholder="Annee d'obtention(Ex: 2015)" id="in" name="domaine_etude" />
                         <hr />
                           <legend> <a href="#" class="btn btn-warning ">ajouer une autre formation</a> </legend>
                       </fieldset>
@@ -92,7 +92,7 @@
                               
         Decrivez votre profile professionnel ci-dessous<br /><br />
       <textarea name="profilePro" class="col-md-11 form-control in" placeholder="decrivez en tirets ou en points"></textarea><br />
-      <br /> votre photo de profil<input type="file" class="form-control col-md-11 in" name="pdp" /><br />
+      <br /> <!-- votre photo de profil<input type="file" class="form-control col-md-11 in" name="pdp" /><br /> -->
      </fieldset>
       <br />'
 

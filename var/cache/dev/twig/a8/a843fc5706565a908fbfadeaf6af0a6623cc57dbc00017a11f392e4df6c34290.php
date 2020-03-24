@@ -102,6 +102,11 @@ class __TwigTemplate_f2934eded4c7e579c9f237710945717f0312d17e9d85a9e276ca03c909d
              <input type=\"password\" name=\"password2\" placeholder=\"mot de pass (repetition)\" class=\"form-control col-md-3\" id=\"in\"  />
              <br /><br />
              <button type=\"submit\" class=\"btn btn-primary col-md-6\"> Inscription <span class=\"fa fa-user\"></span></button>
+             <br /><br />
+             <a href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\" class=\"btn btn-success col-md-6\"> connexion <span class=\"fa fa-log-in\"></span> </a>
            </form>
        </div>
        <br /><br >
@@ -132,7 +137,7 @@ class __TwigTemplate_f2934eded4c7e579c9f237710945717f0312d17e9d85a9e276ca03c909d
 
     public function getDebugInfo()
     {
-        return array (  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  108 => 21,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -156,6 +161,8 @@ class __TwigTemplate_f2934eded4c7e579c9f237710945717f0312d17e9d85a9e276ca03c909d
              <input type=\"password\" name=\"password2\" placeholder=\"mot de pass (repetition)\" class=\"form-control col-md-3\" id=\"in\"  />
              <br /><br />
              <button type=\"submit\" class=\"btn btn-primary col-md-6\"> Inscription <span class=\"fa fa-user\"></span></button>
+             <br /><br />
+             <a href=\"{{ path('app_login') }}\" class=\"btn btn-success col-md-6\"> connexion <span class=\"fa fa-log-in\"></span> </a>
            </form>
        </div>
        <br /><br >

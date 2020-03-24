@@ -104,7 +104,10 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t<nav id=\"nav\" class=\"nav\">
 \t\t\t\t\t\t\t<ul class=\"nav\">
 \t\t\t\t\t\t\t\t<li class=\"current\">
-\t\t\t\t\t\t\t\t\t<a href=\"index.html\" class=\"\">Identifiez-vous</a>
+\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 52
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("son_cv");
+        echo "\" class=\"\">votre cv</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li class=\"\">
 \t\t\t\t\t\t\t\t\t<a href=\"\">CV</a>
@@ -133,7 +136,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t";
         // line 78
         $this->displayBlock('body', $context, $blocks);
-        // line 203
+        // line 206
         echo "\t\t<!-- Footer -->
 \t\t\t<div id=\"footer-wrapper\">
 \t\t\t\t<footer id=\"footer\" class=\"container\">
@@ -217,9 +220,9 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t</div>
      
       ";
-        // line 285
+        // line 288
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 286
+        // line 289
         echo "\t</body>
 </html>";
         
@@ -293,6 +296,9 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"button big icon fa-arrow-circle-right nn\" style=\"cursor:pointer;\" > Crée mon cv </a>
                  </div>
+                 <div class=\"7u pull-center\" style=\"margin-left:20%;\">
+                 <a href=\"#\" style=\"cursor:pointer;\" class=\"button btn-success btn-sm icon fa-arrow-circle-right nn\"> metre votre cv a jour </a>
+                 </div>
                   </span>
 
 \t\t\t\t\t<div class=\"row col-md-9\">
@@ -318,13 +324,13 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t<!-- Box -->
 \t\t\t\t\t\t\t\t<section class=\"box feature\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 115
+        // line 118
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"image featured\"><img src=\"../images/chap.jpg\" alt=\"\" height=\"500px\" width=\"20px\" /></a>
 \t\t\t\t\t\t\t\t\t<div class=\"inner\">
 \t\t\t\t\t\t\t\t\t\t<header>
 \t\t\t\t\t\t\t\t\t\t\t<h2>  <a href=\"";
-        // line 118
+        // line 121
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"btn btn-primary btn-lg col-md-9\"> choisi se modele </a> </h2>
 \t\t\t\t\t\t\t\t\t\t\t<p>  </p>
@@ -339,13 +345,13 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t<!-- Box -->
 \t\t\t\t\t\t\t\t<section class=\"box feature\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 130
+        // line 133
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"image featured\"><img src=\"../images/kerge.jpg\" alt=\" \" height=\"500px\" /></a>
 \t\t\t\t\t\t\t\t\t<div class=\"inner\">
 \t\t\t\t\t\t\t\t\t\t<header>
 \t\t\t\t\t\t\t\t\t\t\t<h2> <a href=\"";
-        // line 133
+        // line 136
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"btn btn-primary btn-lg col-md-9\"> choisi se modele </a> </h2>
 \t\t\t\t\t\t\t\t\t\t\t<p> </p>
@@ -360,13 +366,13 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t<!-- Box -->
 \t\t\t\t\t\t\t\t<section class=\"box feature last\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 145
+        // line 148
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"image featured\"><img src=\"../images/cv.jpg\" alt=\"\" height=\"500px\" /></a>
 \t\t\t\t\t\t\t\t\t<div class=\"inner\">
 \t\t\t\t\t\t\t\t\t\t<header>
 \t\t\t\t\t\t\t\t\t\t\t<h2> <a href=\"";
-        // line 148
+        // line 151
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"btn btn-primary btn-lg col-md-9\"> choisi se modele </a> </h2>
 \t\t\t\t\t\t\t\t\t\t\t<p> </p>
@@ -431,7 +437,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 
     }
 
-    // line 285
+    // line 288
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -461,7 +467,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 
     public function getDebugInfo()
     {
-        return array (  435 => 285,  370 => 148,  364 => 145,  349 => 133,  343 => 130,  328 => 118,  322 => 115,  293 => 89,  281 => 79,  271 => 78,  253 => 33,  234 => 5,  223 => 286,  221 => 285,  137 => 203,  135 => 78,  99 => 45,  86 => 34,  84 => 33,  53 => 5,  47 => 1,);
+        return array (  441 => 288,  376 => 151,  370 => 148,  355 => 136,  349 => 133,  334 => 121,  328 => 118,  296 => 89,  284 => 79,  274 => 78,  256 => 33,  237 => 5,  226 => 289,  224 => 288,  140 => 206,  138 => 78,  109 => 52,  99 => 45,  86 => 34,  84 => 33,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -517,7 +523,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t<nav id=\"nav\" class=\"nav\">
 \t\t\t\t\t\t\t<ul class=\"nav\">
 \t\t\t\t\t\t\t\t<li class=\"current\">
-\t\t\t\t\t\t\t\t\t<a href=\"index.html\" class=\"\">Identifiez-vous</a>
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('son_cv') }}\" class=\"\">votre cv</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li class=\"\">
 \t\t\t\t\t\t\t\t\t<a href=\"\">CV</a>
@@ -555,6 +561,9 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
                  <br /><br />
                  <div class=\"7u pull-center\" style=\"margin-left:20%;\">
                   <a href=\"{{ path('choix_model') }}\" class=\"button big icon fa-arrow-circle-right nn\" style=\"cursor:pointer;\" > Crée mon cv </a>
+                 </div>
+                 <div class=\"7u pull-center\" style=\"margin-left:20%;\">
+                 <a href=\"#\" style=\"cursor:pointer;\" class=\"button btn-success btn-sm icon fa-arrow-circle-right nn\"> metre votre cv a jour </a>
                  </div>
                   </span>
 

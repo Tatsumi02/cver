@@ -1,27 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+
+ <div style="float:right; padding:2%; margin-right:9%; position:fixed;" id="dash" class=" pull-left col-md-4">
+     <a href="#" class="btn btn-success btn-sm" id="imprim">Imprimer le cv</a><br /><br />
+     <a href="#" class="btn btn-warning btn-sm">Modifier le cv</a> <br /><br />
+     <a href="#" class="btn btn-danger btn-sm" style="color:white;">Un probleme</a>
+     <br /><br /><br /><br /><br />
+     <a href="#" class="btn btn-primary btn-sm">Accuil <span class="fas fa-home"></span></a>
+ </div>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>HarvestField</title>
+<title>Mon CV le plus recent</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="../css/HarvestField.css" type="text/css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style type="text/css">
+  body{ 
+     background: gray;
+   }
+</style>
 </head>
-<body>
+<body id="cv">
+<div id="sectionAImprimer">
 <div id="wrap">
   <div id="header">
-    <h1 id="logo-text"><a href="http://all-free-download.com/free-website-templates/"> <span>Tatsumi Oga</span></a></h1>
+    <h1 id="logo-text"><a href="http://all-free-download.com/free-website-templates/"> <span>{% block nomPrenom %} {% endblock %}</span></a></h1>
     <h2 id="slogan">
       
     </h2>
     
   </div>
-  <div  id="nav">
+  <div  id="nav" style="background: rgb(3,92,4); color: white; font-size: 1em;">
     <div id="light-brown-line"></div>
     
       <span style="text-align:center;">
         <center>
-           655027252 <br />
-          tiffa.loic02@gmail.com <br />
-           Doual, Cameroun
+           {% block entete %}{% endblock %}
         </center>
       </span>  
     
@@ -29,98 +42,66 @@
   <div id="content-wrap">
     <div id="sidebar">
       <br />
-      <img src="../images/81277091_542340293021226_2234359703842848768_n.jpg" width="200px" height="150px">
+      {% block photos %}<img src="../images/81277091_542340293021226_2234359703842848768_n.jpg" width="200px" height="150px">{% endblock %}
       <h1>Competences</h1>
-      <ul class="sidemenu">
-         ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <ul class="sidemenu" style="width:100%;">
+         {% block competence %}{% endblock %}
       </ul>
       <h1>Formation</h1>
       <ul class="sidemenu">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {% block formation %}{% endblock %}
       </ul>
       
     </div>
     <div id="main"> <a name="TemplateInfo"></a>
       <h1>Profil professionnel</h1>
       <p>
-         ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-           ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         {% block profilProf %}{% endblock %}
       </p>
       <h1>Parcours Professionnel</h1>
       
         <p>
-               ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-               ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              {% block parcoursProf %} {% endblock %}
         </p>
       <br />
     </div>
+
+
+
   </div>
   <div id="column-wrap" style="text-align:center;">
-    &copy; S.M.X 
+    &copy; cver
   </div>
+
+</div>
+ 
+  
   </body>
+  <script type="text/javascript">
+
+       function imprimer(divName){
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+       }
+
+
+    var button = document.getElementById('imprim');
+
+     button.onclick = function(){
+       //imprimer('sectionAImprimer');
+       document.getElementById('dash').innerHTML = '';
+       var cv = document.getElementById('cv');
+       cv.style.fontSize='1em';
+       cv.style.margin='0px';
+       cv.style.padding='0px';
+
+       window.print();
+     };
+
+  </script>
 </html>

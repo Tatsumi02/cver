@@ -106,7 +106,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t\t<li class=\"current\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
         // line 52
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("son_cv");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("visualisation");
         echo "\" class=\"\">votre cv</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li class=\"\">
@@ -136,7 +136,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t";
         // line 78
         $this->displayBlock('body', $context, $blocks);
-        // line 206
+        // line 231
         echo "\t\t<!-- Footer -->
 \t\t\t<div id=\"footer-wrapper\">
 \t\t\t\t<footer id=\"footer\" class=\"container\">
@@ -220,9 +220,9 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t</div>
      
       ";
-        // line 288
+        // line 313
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 289
+        // line 314
         echo "\t</body>
 </html>";
         
@@ -294,7 +294,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
                   <a href=\"";
         // line 89
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
-        echo "\" class=\"button big icon fa-arrow-circle-right nn\" style=\"cursor:pointer;\" > Crée mon cv </a>
+        echo "\" class=\"button big icon fa-arrow-circle-right nn\" style=\"cursor:pointer;\"  data-toggle=\"modal\" data-target=\"#oMessagerie\"> Crée mon cv </a>
                  </div>
                  <div class=\"7u pull-center\" style=\"margin-left:20%;\">
                  <a href=\"#\" style=\"cursor:pointer;\" class=\"button btn-success btn-sm icon fa-arrow-circle-right nn\"> metre votre cv a jour </a>
@@ -310,6 +310,34 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t
+
+<!-- boite de dialogue  -->
+<div class=\"modal fade\" id=\"oMessagerie\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"oMessagerieLabel\" aria-hidden=\"true\">
+      <div class=\"modal-dialog\" role=\"document\">
+        <div class=\"modal-content\">
+          <div class=\"modal-header\">
+            <h3 class=\"modal-title\" id=\"oMessagerieLabel\"><b style=\"color:pink;\">Cver</b></h3>
+            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Fermer\">
+              <span aria-hidden=\"true\">×</span>
+            </button>
+          </div>
+          <div class=\"modal-body\">
+            <h3><b>C'est bien d'avoir choisir Cver</b> </h3>
+            <p>
+                 Vous voulez cree votre CV, c'est normale. Cver est fait pour vous simplifier la tache. Vous n'aurez qu'a remplir un ensemble de formulaire et <b>Cver</b> genere un cv en fonction de votre modele.
+            </p>
+          </div>
+          <div class=\"modal-footer\">
+            <a href=\"";
+        // line 123
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
+        echo "\" class=\"btn btn-secondary\" >Compris <span class=\"fa fa-ok\"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- fin boitte  -->
+
           <div class=\"container\" style=\"text-align:center; margin:2%;\">
                  <h2><b>Sélectionnez un modèle <span class=\"fa fa-file\"></span></b></h2>
                  <p>Choisissez parmi nos modèles professionnels et attractifs</p>
@@ -324,13 +352,13 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t<!-- Box -->
 \t\t\t\t\t\t\t\t<section class=\"box feature\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 118
+        // line 143
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"image featured\"><img src=\"../images/chap.jpg\" alt=\"\" height=\"500px\" width=\"20px\" /></a>
 \t\t\t\t\t\t\t\t\t<div class=\"inner\">
 \t\t\t\t\t\t\t\t\t\t<header>
 \t\t\t\t\t\t\t\t\t\t\t<h2>  <a href=\"";
-        // line 121
+        // line 146
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"btn btn-primary btn-lg col-md-9\"> choisi se modele </a> </h2>
 \t\t\t\t\t\t\t\t\t\t\t<p>  </p>
@@ -345,13 +373,13 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t<!-- Box -->
 \t\t\t\t\t\t\t\t<section class=\"box feature\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 133
+        // line 158
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"image featured\"><img src=\"../images/kerge.jpg\" alt=\" \" height=\"500px\" /></a>
 \t\t\t\t\t\t\t\t\t<div class=\"inner\">
 \t\t\t\t\t\t\t\t\t\t<header>
 \t\t\t\t\t\t\t\t\t\t\t<h2> <a href=\"";
-        // line 136
+        // line 161
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"btn btn-primary btn-lg col-md-9\"> choisi se modele </a> </h2>
 \t\t\t\t\t\t\t\t\t\t\t<p> </p>
@@ -366,13 +394,13 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t\t<!-- Box -->
 \t\t\t\t\t\t\t\t<section class=\"box feature last\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 148
+        // line 173
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"image featured\"><img src=\"../images/cv.jpg\" alt=\"\" height=\"500px\" /></a>
 \t\t\t\t\t\t\t\t\t<div class=\"inner\">
 \t\t\t\t\t\t\t\t\t\t<header>
 \t\t\t\t\t\t\t\t\t\t\t<h2> <a href=\"";
-        // line 151
+        // line 176
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("choix_model");
         echo "\" class=\"btn btn-primary btn-lg col-md-9\"> choisi se modele </a> </h2>
 \t\t\t\t\t\t\t\t\t\t\t<p> </p>
@@ -437,7 +465,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 
     }
 
-    // line 288
+    // line 313
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -467,7 +495,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 
     public function getDebugInfo()
     {
-        return array (  441 => 288,  376 => 151,  370 => 148,  355 => 136,  349 => 133,  334 => 121,  328 => 118,  296 => 89,  284 => 79,  274 => 78,  256 => 33,  237 => 5,  226 => 289,  224 => 288,  140 => 206,  138 => 78,  109 => 52,  99 => 45,  86 => 34,  84 => 33,  53 => 5,  47 => 1,);
+        return array (  469 => 313,  404 => 176,  398 => 173,  383 => 161,  377 => 158,  362 => 146,  356 => 143,  333 => 123,  296 => 89,  284 => 79,  274 => 78,  256 => 33,  237 => 5,  226 => 314,  224 => 313,  140 => 231,  138 => 78,  109 => 52,  99 => 45,  86 => 34,  84 => 33,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -523,7 +551,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t<nav id=\"nav\" class=\"nav\">
 \t\t\t\t\t\t\t<ul class=\"nav\">
 \t\t\t\t\t\t\t\t<li class=\"current\">
-\t\t\t\t\t\t\t\t\t<a href=\"{{ path('son_cv') }}\" class=\"\">votre cv</a>
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('visualisation') }}\" class=\"\">votre cv</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li class=\"\">
 \t\t\t\t\t\t\t\t\t<a href=\"\">CV</a>
@@ -560,7 +588,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
                  
                  <br /><br />
                  <div class=\"7u pull-center\" style=\"margin-left:20%;\">
-                  <a href=\"{{ path('choix_model') }}\" class=\"button big icon fa-arrow-circle-right nn\" style=\"cursor:pointer;\" > Crée mon cv </a>
+                  <a href=\"{{ path('choix_model') }}\" class=\"button big icon fa-arrow-circle-right nn\" style=\"cursor:pointer;\"  data-toggle=\"modal\" data-target=\"#oMessagerie\"> Crée mon cv </a>
                  </div>
                  <div class=\"7u pull-center\" style=\"margin-left:20%;\">
                  <a href=\"#\" style=\"cursor:pointer;\" class=\"button btn-success btn-sm icon fa-arrow-circle-right nn\"> metre votre cv a jour </a>
@@ -576,6 +604,31 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t
+
+<!-- boite de dialogue  -->
+<div class=\"modal fade\" id=\"oMessagerie\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"oMessagerieLabel\" aria-hidden=\"true\">
+      <div class=\"modal-dialog\" role=\"document\">
+        <div class=\"modal-content\">
+          <div class=\"modal-header\">
+            <h3 class=\"modal-title\" id=\"oMessagerieLabel\"><b style=\"color:pink;\">Cver</b></h3>
+            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Fermer\">
+              <span aria-hidden=\"true\">×</span>
+            </button>
+          </div>
+          <div class=\"modal-body\">
+            <h3><b>C'est bien d'avoir choisir Cver</b> </h3>
+            <p>
+                 Vous voulez cree votre CV, c'est normale. Cver est fait pour vous simplifier la tache. Vous n'aurez qu'a remplir un ensemble de formulaire et <b>Cver</b> genere un cv en fonction de votre modele.
+            </p>
+          </div>
+          <div class=\"modal-footer\">
+            <a href=\"{{ path('choix_model') }}\" class=\"btn btn-secondary\" >Compris <span class=\"fa fa-ok\"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- fin boitte  -->
+
           <div class=\"container\" style=\"text-align:center; margin:2%;\">
                  <h2><b>Sélectionnez un modèle <span class=\"fa fa-file\"></span></b></h2>
                  <p>Choisissez parmi nos modèles professionnels et attractifs</p>

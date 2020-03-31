@@ -52,7 +52,7 @@ class __TwigTemplate_88c8556eb99301209c288472dd4403907e9c17b612b4d4a6d708437cbee
          veillez patientez...
 
         <script type=\"text/javascript\">
-           var temps = 20;
+           var temps = 7;
            var lieu = document.getElementById('c');
            var compteur = setInterval(function(){ 
                   
@@ -107,7 +107,7 @@ class __TwigTemplate_88c8556eb99301209c288472dd4403907e9c17b612b4d4a6d708437cbee
          veillez patientez...
 
         <script type=\"text/javascript\">
-           var temps = 20;
+           var temps = 7;
            var lieu = document.getElementById('c');
            var compteur = setInterval(function(){ 
                   

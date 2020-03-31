@@ -49,7 +49,7 @@
 						<nav id="nav" class="nav">
 							<ul class="nav">
 								<li class="current">
-									<a href="{{ path('son_cv') }}" class="">votre cv</a>
+									<a href="{{ path('visualisation') }}" class="">votre cv</a>
 								</li>
 								<li class="">
 									<a href="">CV</a>
@@ -86,7 +86,7 @@
                  
                  <br /><br />
                  <div class="7u pull-center" style="margin-left:20%;">
-                  <a href="{{ path('choix_model') }}" class="button big icon fa-arrow-circle-right nn" style="cursor:pointer;" > Crée mon cv </a>
+                  <a href="{{ path('choix_model') }}" class="button big icon fa-arrow-circle-right nn" style="cursor:pointer;"  data-toggle="modal" data-target="#oMessagerie"> Crée mon cv </a>
                  </div>
                  <div class="7u pull-center" style="margin-left:20%;">
                  <a href="#" style="cursor:pointer;" class="button btn-success btn-sm icon fa-arrow-circle-right nn"> metre votre cv a jour </a>
@@ -102,6 +102,31 @@
 				</div>
 			</div>
 		
+
+<!-- boite de dialogue  -->
+<div class="modal fade" id="oMessagerie" tabindex="-1" role="dialog" aria-labelledby="oMessagerieLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="oMessagerieLabel"><b style="color:pink;">Cver</b></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3><b>C'est bien d'avoir choisir Cver</b> </h3>
+            <p>
+                 Vous voulez cree votre CV, c'est normale. Cver est fait pour vous simplifier la tache. Vous n'aurez qu'a remplir un ensemble de formulaire et <b>Cver</b> genere un cv en fonction de votre modele.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="{{ path('choix_model') }}" class="btn btn-secondary" >Compris <span class="fa fa-ok"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- fin boitte  -->
+
           <div class="container" style="text-align:center; margin:2%;">
                  <h2><b>Sélectionnez un modèle <span class="fa fa-file"></span></b></h2>
                  <p>Choisissez parmi nos modèles professionnels et attractifs</p>

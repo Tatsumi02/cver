@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-
- <div style="float:right; padding:2%; margin-right:9%; position:fixed;" id="dash" class=" pull-left col-md-4">
-     <a href="#" class="btn btn-success btn-sm" id="imprim">Imprimer le cv</a><br /><br />
-     <a href="#" class="btn btn-warning btn-sm">Modifier le cv</a> <br /><br />
-     <a href="#" class="btn btn-danger btn-sm" style="color:white;">Un probleme</a>
-     <br /><br /><br /><br /><br />
-     <a href="#" class="btn btn-primary btn-sm">Accuil <span class="fas fa-home"></span></a>
- </div>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
 <title>Mon CV le plus recent</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
 <link rel="stylesheet" href="../css/HarvestField.css" type="text/css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.dropotron.min.js"></script>
+    <script src="../js/skel.min.js"></script>
+    <script src="../js/skel-layers.min.js"></script>
+    <script src="../js/init.js"></script>
 <style type="text/css">
   body{ 
      background: gray;
    }
 </style>
 </head>
-<body id="cv">
+<body >
+
+
+ <div class="modal fade" id="oMessagerie" tabindex="-1" role="dialog" aria-labelledby="oMessagerieLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="oMessagerieLabel"><b style="color:pink;">Cver</b></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3><b>Cver</b> version alpha</h3>
+            <p>
+                 Vous voulez cree votre CV, c'est normale. Cver est fait pour vous simplifier la tache. N'oubliez pas de nous donner votre avis sur le fonctionnement de l'application cela va nous aider a ameliorer
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-secondary" >Compris <span class="fa fa-ok"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
 <div id="sectionAImprimer">
 <div id="wrap">
   <div id="header">
@@ -70,37 +94,33 @@
 
   </div>
   <div id="column-wrap" style="text-align:center;">
-    &copy; cver
+      <div style=" padding:2%; margin-right:9%;" id="dash" class=" col-md-15">
+     <a href="#" class="btn btn-success btn-lg pull-left" id="print" data-toggle="modal" data-target="#oMessagerie">
+    Imprimer le cv <span class="fas fa-print"></span></a>
+<hr />
+   <div class="pull-right">
+     <a href="#" class="btn btn-warning btn-sm">Modifier le cv</a> 
+     <a href="#" class="btn btn-danger btn-sm" style="color:white;">Un probleme</a>
+     
+     <a href="#" class="btn btn-primary btn-sm">Accuil <span class="fas fa-home"></span></a>
+  </div>
+ </div>
   </div>
 
 </div>
  
-  
   </body>
   <script type="text/javascript">
+    
+    var d = document.getElementById('dash');
+    var prints = document.getElementById('print');
 
-       function imprimer(divName){
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
+     prints.onclick = function(){
+      d.innerHTML = '';
 
-        window.print();
+      window.print();
 
-        document.body.innerHTML = originalContents;
-       }
-
-
-    var button = document.getElementById('imprim');
-
-     button.onclick = function(){
-       //imprimer('sectionAImprimer');
-       document.getElementById('dash').innerHTML = '';
-       var cv = document.getElementById('cv');
-       cv.style.fontSize='1em';
-       cv.style.margin='0px';
-       cv.style.padding='0px';
-
-       window.print();
+      return false;
      };
 
   </script>

@@ -45,6 +45,7 @@ class __TwigTemplate_7e0a28b16c1e8054be477466e53e31e2596b8552b0c85e1c406d54ea32b
 <head>
 <title> vous avez choisir ce template </title>
 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />
+<script src=\"../js/jquery.min.js\"></script>
 <link rel=\"stylesheet\" href=\"../css/HarvestField.css\" type=\"text/css\" />
 <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
@@ -57,6 +58,43 @@ class __TwigTemplate_7e0a28b16c1e8054be477466e53e31e2596b8552b0c85e1c406d54ea32b
 </style>
 </head>
 <body>
+  <button id=\"b\"  data-toggle=\"modal\" data-target=\"#oMessagerie\" style=\"display:none;\">click</button>
+   <script type=\"text/javascript\">
+      \$(function(){
+            var t = 3;
+            var com = setInterval(function(){
+              t--;
+            var but = document.getElementById('b');
+            if (t == 0) {
+
+               but.click( true ); 
+            }
+
+            },1000);
+      });
+   </script>
+  
+<div class=\"modal fade\" id=\"oMessagerie\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"oMessagerieLabel\" aria-hidden=\"true\">
+      <div class=\"modal-dialog\" role=\"document\">
+        <div class=\"modal-content\">
+          <div class=\"modal-header\">
+            <h3 class=\"modal-title\" id=\"oMessagerieLabel\"><b style=\"color:pink;\">Cver</b></h3>
+            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Fermer\">
+              <span aria-hidden=\"true\">×</span>
+            </button>
+          </div>
+          <div class=\"modal-body\">
+            Cette page vous montre un apercu de votre cv a partit de ce modele qui est le model par defaut.
+            vous allez le customiser apres votre inscription et imprimer votre nouveau cv
+          </div>
+          <div class=\"modal-footer\">
+            <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Compris</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 <div id=\"wrap\">
   <div id=\"header\">
     <h1 id=\"logo-text\"><a href=\"http://all-free-download.com/free-website-templates/\"> <span>Tatsumi Oga</span></a></h1>
@@ -172,7 +210,7 @@ class __TwigTemplate_7e0a28b16c1e8054be477466e53e31e2596b8552b0c85e1c406d54ea32b
   </div>
   <div id=\"column-wrap\" style=\"text-align:center;\">
      <a href=\"";
-        // line 132
+        // line 170
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
         echo "\" class=\"btn btn-primary\"> customiser ce modele maintenant </a>
   </div>
@@ -199,7 +237,7 @@ class __TwigTemplate_7e0a28b16c1e8054be477466e53e31e2596b8552b0c85e1c406d54ea32b
 
     public function getDebugInfo()
     {
-        return array (  176 => 132,  43 => 1,);
+        return array (  214 => 170,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -209,6 +247,7 @@ class __TwigTemplate_7e0a28b16c1e8054be477466e53e31e2596b8552b0c85e1c406d54ea32b
 <head>
 <title> vous avez choisir ce template </title>
 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />
+<script src=\"../js/jquery.min.js\"></script>
 <link rel=\"stylesheet\" href=\"../css/HarvestField.css\" type=\"text/css\" />
 <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
@@ -221,6 +260,43 @@ class __TwigTemplate_7e0a28b16c1e8054be477466e53e31e2596b8552b0c85e1c406d54ea32b
 </style>
 </head>
 <body>
+  <button id=\"b\"  data-toggle=\"modal\" data-target=\"#oMessagerie\" style=\"display:none;\">click</button>
+   <script type=\"text/javascript\">
+      \$(function(){
+            var t = 3;
+            var com = setInterval(function(){
+              t--;
+            var but = document.getElementById('b');
+            if (t == 0) {
+
+               but.click( true ); 
+            }
+
+            },1000);
+      });
+   </script>
+  
+<div class=\"modal fade\" id=\"oMessagerie\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"oMessagerieLabel\" aria-hidden=\"true\">
+      <div class=\"modal-dialog\" role=\"document\">
+        <div class=\"modal-content\">
+          <div class=\"modal-header\">
+            <h3 class=\"modal-title\" id=\"oMessagerieLabel\"><b style=\"color:pink;\">Cver</b></h3>
+            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Fermer\">
+              <span aria-hidden=\"true\">×</span>
+            </button>
+          </div>
+          <div class=\"modal-body\">
+            Cette page vous montre un apercu de votre cv a partit de ce modele qui est le model par defaut.
+            vous allez le customiser apres votre inscription et imprimer votre nouveau cv
+          </div>
+          <div class=\"modal-footer\">
+            <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Compris</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 <div id=\"wrap\">
   <div id=\"header\">
     <h1 id=\"logo-text\"><a href=\"http://all-free-download.com/free-website-templates/\"> <span>Tatsumi Oga</span></a></h1>

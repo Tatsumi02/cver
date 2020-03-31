@@ -6,7 +6,7 @@
 {% endblock %}
 {% block body %}
 <div id="notifi">
-  Bienvenue <b>{{ app.user.nom |upper }}</b>. vous pouver tester notre premiere version de cver et nous envoyer vos avis sur cette version. <a href="{{ path('critique') }}" class="btn btn-primary btn-sm">Vous en dites quoi?</a>
+  Bon remplissage <b>{{ app.user.nom |upper }}</b>
 </div>
     <section class="box feature ">
        <div class="container">
@@ -70,14 +70,14 @@
                       
                       <fieldset id="f">
                         <legend id="l" class="col-md-3"> <h3 style=" display:inline; color:white;">Formation</h3> </legend>
-                       <input type="text" class="form-control col-md-6 in" placeholder="nom de l\'etablisement " name="etablisement" id="in" />
+                       <input type="text" class="form-control col-md-6 in" placeholder="nom de l'etablisement " name="etablisement" id="in" />
 
                        <input type="text" class="form-control col-md-5 in" id="in" placeholder="diplome(ex:licence en art)" name="diplome" />
                        <br />
 
-                       <br /><input type="text" class="form-control col-md-6 in" placeholder="Domaine d\'etude(ex:economie)" name="domaine_etude" id="in" />
+                       <br /><input type="text" class="form-control col-md-6 in" placeholder="Domaine d'etude(ex:economie)" name="domaine_etude" id="in" />
 
-                       <input type="text" class="form-control col-md-5 in" placeholder="zone geographique de l\'etablisement(ex:Douala)" id="in" name="zone_geographique" /><br /><br />
+                       <input type="text" class="form-control col-md-5 in" placeholder="zone geographique de l'etablisement(ex:Douala)" id="in" name="zone_geographique" /><br /><br />
 
                        <input type="text" class="form-control col-md-11 in" placeholder="Annee d'obtention(Ex: 2015)" id="in" name="domaine_etude" />
                         <hr />

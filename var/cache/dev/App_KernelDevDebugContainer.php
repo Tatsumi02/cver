@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerF9ockPu\App_KernelDevDebugContainer([
     'container.build_hash' => 'F9ockPu',
-    'container.build_id' => 'b0f377e7',
-    'container.build_time' => 1584914203,
+    'container.build_id' => '9ef189f6',
+    'container.build_time' => 1585082390,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerF9ockPu');

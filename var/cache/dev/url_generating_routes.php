@@ -16,6 +16,7 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\CvController::index'], [], [['text', '/']], [], []],
+    'dash' => [[], ['_controller' => 'App\\Controller\\CvController::dash'], [], [['text', '/user']], [], []],
     'modele' => [[], ['_controller' => 'App\\Controller\\CvController::modele'], [], [['text', '/modele']], [], []],
     'choix_model' => [[], ['_controller' => 'App\\Controller\\CvController::choixModele'], [], [['text', '/choix-modele']], [], []],
     'les_modeles' => [[], ['_controller' => 'App\\Controller\\CvController::modeles'], [], [['text', '/choix-modeles']], [], []],

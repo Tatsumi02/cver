@@ -16,14 +16,15 @@
 
 body {
 	background: #E2DDD9 url(../css/images/bg.jpg) repeat-y center top;
-	font: 70%/1.5em Verdana, Tahoma, arial, sans-serif;
+	font: 15px/2em Verdana, Tahoma, arial, sans-serif;
 	color: #6B4F2E; 
-	text-align: center;		
+	text-align: center;	
+    width: 0px;
 }
 
 /* links */
 a, a:visited {	
-	color: #BE420D;
+	color: #342f43;
 	background: inherit;
 	text-decoration: none;
 }
@@ -200,7 +201,7 @@ input.button {
 ********************************************/ 
 #wrap {
 	position: relative;
-	width: 830px;
+	width: 1200px;
 	margin: 0 auto;
 	text-align: left;
 	border-right: 1px solid #FFF;
@@ -210,14 +211,14 @@ input.button {
 	position: relative;
 	clear: both;
 	float: left;	
-	width: 830px;	
+	width: 1200px;	
 	padding: 0; 	
 	border-bottom: 2px solid #FFF;
 	background: #F2EFBA url(../../imagescontentbg.jpg) repeat-y center top;	
 	display: inline;
 }
 #header {
-	width: 830px;
+	width: 1200px;
 	position: relative;
 	height: 190px;
 	background: #FFF url(../headerbg.jpg) repeat-x;
@@ -270,7 +271,7 @@ input.button {
 	position: relative;
 	clear: both;	
 	padding: 0;		
-	width: 830px;
+	width: 1200px;
 	margin: 0 auto;	
 	background: url(../menubg.jpg) repeat-x;
 	height: 52px;
@@ -388,7 +389,7 @@ input.button {
 #column-wrap {
 	clear: both;
 	float: left;
-	width: 830px;
+	width: 1200px;
 	padding: 10px 0 35px 0;		
 	background: #A0B70D url(../footercolbg.jpg) repeat-x left bottom;		
 	border-bottom: 1px solid #CCA066;	

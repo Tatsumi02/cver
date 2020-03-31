@@ -28,6 +28,18 @@ class CvController extends AbstractController
     }
 
     /**
+     * @Route("/user", name="dash")
+     * Require ROLE_USER for only this controller method.
+     *
+     * @IsGranted("ROLE_USER")
+    */
+    public function dash(){
+        //ce controller conserne l'espace utilisateur
+        
+      return new Response('<center> ici votre dash <br /> en cours de conception... </center>');
+    }
+
+    /**
      * @Route("/modele", name="modele")
     */
     public function modele(){
@@ -154,7 +166,7 @@ class CvController extends AbstractController
          $description_respon = $request->request -> get('description_respon');
          $etablissement = $request->request -> get('etablisement');
          $diplome = $request->request -> get('diplome');
-         $domaine_etude = $request->request -> get('domaine_etude');
+         $domaine_etudes = $request->request -> get('domaine_etude');
          $zone_geographique= $request->request -> get('zone_geographique');
 
           $competences= $request->request -> get('competences');
@@ -177,7 +189,7 @@ class CvController extends AbstractController
           $datas -> setDescriptionResponsabilite($description_respon);
           $datas -> setEtablissement($etablissement);
           $datas -> setDiplome($diplome);
-          $datas -> setDomaineDetude($domaine_etude);
+          $datas -> setDomaineDetude($domaine_etudes);
           $datas -> setZoneGeographique($zone_geographique);
           $datas -> setProfilProfessionnel($profil_prof);
           $datas -> setCompetence($competences);

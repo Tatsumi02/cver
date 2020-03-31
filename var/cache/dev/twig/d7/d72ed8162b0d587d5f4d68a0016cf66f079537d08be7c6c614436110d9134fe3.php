@@ -65,7 +65,7 @@ class __TwigTemplate_379914617c9cfb08b51761f196215be38012be070c2ab33869691301673
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Connection!";
+        echo "Connectez-vous!";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -183,7 +183,7 @@ class __TwigTemplate_379914617c9cfb08b51761f196215be38012be070c2ab33869691301673
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Connection!{% endblock %}
+{% block title %}Connectez-vous!{% endblock %}
 
 {% block body %}
 <section class=\"box feature \">

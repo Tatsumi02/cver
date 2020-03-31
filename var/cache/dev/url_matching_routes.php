@@ -14,6 +14,7 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\CvController::index'], null, null, null, false, false, null]],
+        '/user' => [[['_route' => 'dash', '_controller' => 'App\\Controller\\CvController::dash'], null, null, null, false, false, null]],
         '/modele' => [[['_route' => 'modele', '_controller' => 'App\\Controller\\CvController::modele'], null, null, null, false, false, null]],
         '/choix-modele' => [[['_route' => 'choix_model', '_controller' => 'App\\Controller\\CvController::choixModele'], null, null, null, false, false, null]],
         '/choix-modeles' => [[['_route' => 'les_modeles', '_controller' => 'App\\Controller\\CvController::modeles'], null, null, null, false, false, null]],

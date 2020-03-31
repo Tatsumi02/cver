@@ -108,12 +108,10 @@ class __TwigTemplate_0cc5d9e0aa0216e9bc001dc96dbfc39c66af31823fa0a0937267bc483b8
 
         // line 8
         echo "<div id=\"notifi\">
-  Bienvenue <b>";
+  Bon remplissage <b>";
         // line 9
         echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "user", [], "any", false, false, false, 9), "nom", [], "any", false, false, false, 9)), "html", null, true);
-        echo "</b>. vous pouver tester notre premiere version de cver et nous envoyer vos avis sur cette version. <a href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("critique");
-        echo "\" class=\"btn btn-primary btn-sm\">Vous en dites quoi?</a>
+        echo "</b>
 </div>
     <section class=\"box feature \">
        <div class=\"container\">
@@ -189,14 +187,14 @@ class __TwigTemplate_0cc5d9e0aa0216e9bc001dc96dbfc39c66af31823fa0a0937267bc483b8
                       
                       <fieldset id=\"f\">
                         <legend id=\"l\" class=\"col-md-3\"> <h3 style=\" display:inline; color:white;\">Formation</h3> </legend>
-                       <input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"nom de l\\'etablisement \" name=\"etablisement\" id=\"in\" />
+                       <input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"nom de l'etablisement \" name=\"etablisement\" id=\"in\" />
 
                        <input type=\"text\" class=\"form-control col-md-5 in\" id=\"in\" placeholder=\"diplome(ex:licence en art)\" name=\"diplome\" />
                        <br />
 
-                       <br /><input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"Domaine d\\'etude(ex:economie)\" name=\"domaine_etude\" id=\"in\" />
+                       <br /><input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"Domaine d'etude(ex:economie)\" name=\"domaine_etude\" id=\"in\" />
 
-                       <input type=\"text\" class=\"form-control col-md-5 in\" placeholder=\"zone geographique de l\\'etablisement(ex:Douala)\" id=\"in\" name=\"zone_geographique\" /><br /><br />
+                       <input type=\"text\" class=\"form-control col-md-5 in\" placeholder=\"zone geographique de l'etablisement(ex:Douala)\" id=\"in\" name=\"zone_geographique\" /><br /><br />
 
                        <input type=\"text\" class=\"form-control col-md-11 in\" placeholder=\"Annee d'obtention(Ex: 2015)\" id=\"in\" name=\"domaine_etude\" />
                         <hr />
@@ -262,7 +260,7 @@ class __TwigTemplate_0cc5d9e0aa0216e9bc001dc96dbfc39c66af31823fa0a0937267bc483b8
 
     public function getDebugInfo()
     {
-        return array (  156 => 38,  142 => 27,  138 => 26,  125 => 16,  113 => 9,  110 => 8,  100 => 7,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  154 => 38,  140 => 27,  136 => 26,  123 => 16,  113 => 9,  110 => 8,  100 => 7,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -275,7 +273,7 @@ class __TwigTemplate_0cc5d9e0aa0216e9bc001dc96dbfc39c66af31823fa0a0937267bc483b8
 {% endblock %}
 {% block body %}
 <div id=\"notifi\">
-  Bienvenue <b>{{ app.user.nom |upper }}</b>. vous pouver tester notre premiere version de cver et nous envoyer vos avis sur cette version. <a href=\"{{ path('critique') }}\" class=\"btn btn-primary btn-sm\">Vous en dites quoi?</a>
+  Bon remplissage <b>{{ app.user.nom |upper }}</b>
 </div>
     <section class=\"box feature \">
        <div class=\"container\">
@@ -339,14 +337,14 @@ class __TwigTemplate_0cc5d9e0aa0216e9bc001dc96dbfc39c66af31823fa0a0937267bc483b8
                       
                       <fieldset id=\"f\">
                         <legend id=\"l\" class=\"col-md-3\"> <h3 style=\" display:inline; color:white;\">Formation</h3> </legend>
-                       <input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"nom de l\\'etablisement \" name=\"etablisement\" id=\"in\" />
+                       <input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"nom de l'etablisement \" name=\"etablisement\" id=\"in\" />
 
                        <input type=\"text\" class=\"form-control col-md-5 in\" id=\"in\" placeholder=\"diplome(ex:licence en art)\" name=\"diplome\" />
                        <br />
 
-                       <br /><input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"Domaine d\\'etude(ex:economie)\" name=\"domaine_etude\" id=\"in\" />
+                       <br /><input type=\"text\" class=\"form-control col-md-6 in\" placeholder=\"Domaine d'etude(ex:economie)\" name=\"domaine_etude\" id=\"in\" />
 
-                       <input type=\"text\" class=\"form-control col-md-5 in\" placeholder=\"zone geographique de l\\'etablisement(ex:Douala)\" id=\"in\" name=\"zone_geographique\" /><br /><br />
+                       <input type=\"text\" class=\"form-control col-md-5 in\" placeholder=\"zone geographique de l'etablisement(ex:Douala)\" id=\"in\" name=\"zone_geographique\" /><br /><br />
 
                        <input type=\"text\" class=\"form-control col-md-11 in\" placeholder=\"Annee d'obtention(Ex: 2015)\" id=\"in\" name=\"domaine_etude\" />
                         <hr />

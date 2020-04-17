@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CverController!{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% set text1 = 'Derniere Etape.' %}
+{% set text2 = 'Ajouter une photo d.illustration du modele. '%}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    {# templates/product/new.html.twig #}
+<h1>Ajouter votre photo de presentation du modele </h1>
+<p>
+ cette photo doit etre une capture de votre modele. nous allons l'utiliser pour afficher comme presentation.
+</p>
+<hr />
+{{ form_start(form) }}
+    {# ... #}
+
+    {{ form_row(form.brochure) }}
+{{ form_end(form) }}
+
+</div>
+{% endblock %}

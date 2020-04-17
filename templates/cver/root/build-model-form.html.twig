@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Cree un modele!{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="../../css/skel.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../css/style-desktop.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock %}
+
+{% block javascripts %}
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.dropotron.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/skel-layers.min.js"></script>
+<script src="../../js/init.js"></script>
+{% endblock %}
+ {% set text1 = 'Bien, maintenant vous avez pris consciences sur ce qu.il doit etre fait.' %}
+ {% set text2 = 'veillez bien remplir les champs de ce form. '%}
+
+ {% block body %}
+    <div class="container">
+
+      <div class="col-md-3 pull-left" style="">
+      <div class="dash" style="background:white; padding:2%;">
+        <font><span class="fa fa-user"></span> {{app.user.prenom}}</font>
+
+      <div class="dash" style="border-left:5px solid red; background:white;  padding:2%; ">
+        <a href="{{path('app_logout')}}" style="color:red; hover{color:pink;}">Deconnexion</a>
+      </div>
+     </div>
+     </div>
+    </div>
+    <br /><br />
+    <div class="col-md-8 notice pull-right">
+      <div class="zone">
+
+       <h2>Cree votre modele appartir de ce formulaire</h2>
+       <p class="">
+          <form class="" action="{{ path('build_model_tempo') }}" method="post">
+            <span>
+              <input type="text" name="nomModele" class="form-control" placeholder="nom de votre modele">
+                  <p style="text-align:right; font-size:0.8em;">Choisissez un nom significative a votre modele</p>
+
+            </span>
+            <span>
+               <textarea name="codeModele" rows="8" cols="80" class="form-control" placeholder="Code source de votre modele"></textarea>
+               <p style="text-align:right; font-size:0.8em;">nous vous recommandons de cree votre code dans un editeur de codes adapter et copier le code pour le coller ici</p>
+
+            </span>
+            <span>
+              <textarea name="buildModele" rows="8" class="form-control" cols="80" placeholder="Code source du build de votre modele"></textarea>
+              <p style="text-align:right; font-size:0.8em;">nous vous recommandons de cree votre code dans un editeur de codes adapter et copier le code pour le coller ici</p>
+
+            </span>
+            <button type="submit" class="btn btn-success btn-lg" style="color:white;" name="button">envoyer <span class="fa fa-next"></span> </button>
+
+          </form>
+       </p>
+
+     </div>
+
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+ {% endblock %}

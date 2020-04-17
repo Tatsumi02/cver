@@ -45,6 +45,9 @@ class __TwigTemplate_f8ade9d3648b0c0e3517fee1b7b11762ff49d41025a17d61076ede5aa46
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "cver/index.html.twig"));
 
+        // line 4
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
+        // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "cver/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -91,22 +94,30 @@ class __TwigTemplate_f8ade9d3648b0c0e3517fee1b7b11762ff49d41025a17d61076ede5aa46
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+    
+    ";
+        // line 14
+        echo "<h1>Ajouter votre photo de profil </h1>
+<p>
+ cette photo est indispensable pour votre image et cela representera une premiere approche face a votre futur employeur. Choisissez une bonne photo avec couleur et sans filtre.
+</p>
+<hr />
+";
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_start');
+        echo "
+    ";
+        // line 21
+        echo "
+    ";
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "brochure", [], "any", false, false, false, 22), 'row');
+        echo "
+";
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_end');
+        echo "
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/html/symfony/cver/src/Controller/CverController.php", 0), "html", null, true);
-        echo "\">src/Controller/CverController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/html/symfony/cver/templates/cver/index.html.twig", 0), "html", null, true);
-        echo "\">templates/cver/index.html.twig</a></code></li>
-    </ul>
 </div>
 ";
         
@@ -129,7 +140,7 @@ class __TwigTemplate_f8ade9d3648b0c0e3517fee1b7b11762ff49d41025a17d61076ede5aa46
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  118 => 23,  114 => 22,  111 => 21,  107 => 19,  100 => 14,  91 => 6,  81 => 5,  62 => 3,  51 => 1,  49 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -137,7 +148,7 @@ class __TwigTemplate_f8ade9d3648b0c0e3517fee1b7b11762ff49d41025a17d61076ede5aa46
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Hello CverController!{% endblock %}
-
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
@@ -145,13 +156,19 @@ class __TwigTemplate_f8ade9d3648b0c0e3517fee1b7b11762ff49d41025a17d61076ede5aa46
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    
+    {# templates/product/new.html.twig #}
+<h1>Ajouter votre photo de profil </h1>
+<p>
+ cette photo est indispensable pour votre image et cela representera une premiere approche face a votre futur employeur. Choisissez une bonne photo avec couleur et sans filtre.
+</p>
+<hr />
+{{ form_start(form) }}
+    {# ... #}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/var/www/html/symfony/cver/src/Controller/CverController.php'|file_link(0) }}\">src/Controller/CverController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/var/www/html/symfony/cver/templates/cver/index.html.twig'|file_link(0) }}\">templates/cver/index.html.twig</a></code></li>
-    </ul>
+    {{ form_row(form.brochure) }}
+{{ form_end(form) }}
+
 </div>
 {% endblock %}
 ", "cver/index.html.twig", "/var/www/html/symfony/cver/templates/cver/index.html.twig");

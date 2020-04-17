@@ -20,7 +20,6 @@
 </head>
 <body >
 
-
  <div class="modal fade" id="oMessagerie" tabindex="-1" role="dialog" aria-labelledby="oMessagerieLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -46,8 +45,14 @@
 
 <div id="sectionAImprimer">
 <div id="wrap">
-  <div id="header">
-    <h1 id="logo-text"><a href="http://all-free-download.com/free-website-templates/"> <span>{% block nomPrenom %} {% endblock %}</span></a></h1>
+
+<div id="header">
+    <div style=" padding:2%; margin-right:9%;" id="dash" class=" col-md-15">
+     {% block imprim %}{% endblock %}
+      
+ </div>
+<br /><br />
+    <h1 id="logo-text"><a href="#"> <span>{% block nomPrenom %} {% endblock %}</span></a></h1>
     <h2 id="slogan">
       
     </h2>
@@ -66,7 +71,7 @@
   <div id="content-wrap">
     <div id="sidebar">
       <br />
-      {% block photos %}<img src="../images/81277091_542340293021226_2234359703842848768_n.jpg" width="200px" height="150px">{% endblock %}
+      <img src="../fichiers/{% block photos %}81277091_542340293021226_2234359703842848768_n.jpg{% endblock %}" width="200px" height="150px">
       <h1>Competences</h1>
       <ul class="sidemenu" style="width:100%;">
          {% block competence %}{% endblock %}
@@ -89,27 +94,24 @@
         </p>
       <br />
     </div>
+<br /><br /><br /><br /><br /><br />
+  
 
 
+ 
 
-  </div>
-  <div id="column-wrap" style="text-align:center;">
-      <div style=" padding:2%; margin-right:9%;" id="dash" class=" col-md-15">
-     <a href="#" class="btn btn-success btn-lg pull-left" id="print" data-toggle="modal" data-target="#oMessagerie">
-    Imprimer le cv <span class="fas fa-print"></span></a>
-<hr />
-   <div class="pull-right">
-     <a href="#" class="btn btn-warning btn-sm">Modifier le cv</a> 
-     <a href="#" class="btn btn-danger btn-sm" style="color:white;">Un probleme</a>
-     
-     <a href="#" class="btn btn-primary btn-sm">Accuil <span class="fas fa-home"></span></a>
-  </div>
- </div>
-  </div>
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id="column-wrap" style="text-align:center;">
+     <span style="color:gray; opacity:0.8;">
+      &copy; cver
+     </span>
 </div>
+</div>
+  </div>
  
   </body>
+  {% block script %}
+  {% endblock %}
   <script type="text/javascript">
     
     var d = document.getElementById('dash');
@@ -122,6 +124,14 @@
 
       return false;
      };
+
+     var temps = 4;
+     var compt = setInterval(function(){
+        --temps;
+        if (temps == 3) { prints.style.background = 'red'; prints.style.color='yellow'; }
+        if (temps == 2) { prints.style.background = 'yellow'; prints.style.color='white'; }
+        if (temps == 1) { prints.style.background = 'green'; prints.style.color='white'; temps = 4; }
+     },1000);
 
   </script>
 </html>

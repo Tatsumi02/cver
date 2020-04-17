@@ -10,12 +10,12 @@
 </div>
     <section class="box feature ">
        <div class="container">
-              
 
-             
+
+
        <form method="post" action="{{ path('save_cv') }}" enctype="multipart/form-data" class="jumbotron col-md-12" id="">
 
-                
+
                 <div id="profiler col-md-12"></div>
                 <div id="sender"></div>
 
@@ -58,7 +58,7 @@
                  <br /><br />date de fin<br /><input type="date" name="date_fine" class="form-control col-md-11 in" value="" id="in" placeholder="" />
 
                  <br /><input type="checkbox" name="travailActu" id="travailActu" /> <label for="travailActu" style="display:inline;">j'y travaille actuellement </label>
-               
+
                <br /><br />
                     quel etait (ou sont) vos responsabilites <br /> decrivez les dans le champ ci-dessous <br /><br />
 
@@ -67,7 +67,7 @@
                       <a href="#" class="btn btn-warning "> Ajouter un autre parcours</a>
         </fieldset>
         <br /><br />
-                      
+
                       <fieldset id="f">
                         <legend id="l" class="col-md-3"> <h3 style=" display:inline; color:white;">Formation</h3> </legend>
                        <input type="text" class="form-control col-md-6 in" placeholder="nom de l'etablisement " name="etablisement" id="in" />
@@ -88,8 +88,8 @@
       <legend id="l4" class="col-md-4">Note professionnel</legend>
       Decrivez vos competences dans le champ ci-dessous
       <textarea name="competences" class="col-md-11 form-control in" placeholder="decrivez en tirets ou en points"></textarea><br /><br />
-                                   
-                              
+
+
         Decrivez votre profile professionnel ci-dessous<br /><br />
       <textarea name="profilePro" class="col-md-11 form-control in" placeholder="decrivez en tirets ou en points"></textarea><br />
       <br /> <!-- votre photo de profil<input type="file" class="form-control col-md-11 in" name="pdp" /><br /> -->
@@ -98,16 +98,16 @@
 
 
       <br /><br />
- <button class="btn btn-primary col-md-5" type="submit" id="etapeur">Voir un appercu de votre cv <span class="fa fa-plus"></span></button>
+ <button class="btn btn-primary col-md-5" type="submit" id="etapeur">Etape suivante <span class="fa fa-plus"></span></button>
 
                 </div>
-                   
+
 
               </form>
 
             </div>
 
-       
+
        <br /><br />
     </section>
 <style>
@@ -117,9 +117,9 @@
   }
 </style>
 
-               
-                                   
-                   
+
+
+
 
 
 {% endblock %}

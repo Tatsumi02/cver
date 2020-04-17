@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Remplissez votre cv en quelques etapes!{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="../../css/skel.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../css/style-desktop.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock %}
+
+{% block javascripts %}
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.dropotron.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/skel-layers.min.js"></script>
+<script src="../../js/init.js"></script>
+{% endblock %}
+ {% set text1 = 'Bien ici vous etes en supers utilisateur.' %}
+ {% set text2 = 'vous pouvez cree des administrateurs sur cette plate-forme'%}
+{% block body %}
+<center>
+<form class="" method="post" action="{{ path('admin_save') }}">
+
+
+ <h2> Cree un compte administrateurs </h2>
+<br />
+
+ <div class="col-md-12">
+  <input type="text" name="nom" placeholder="nom" class="form-control col-md-6" id="in" required="true" />
+  <br />
+  <input type="text" name="prenom" placeholder="prenom" class="form-control col-md-6" id="in" required="true"  />
+  <br />
+  <input type="email" name="email" placeholder="email" class="form-control col-md-6" id="in" required="true" />
+  <br />
+  <input type="password" name="password" placeholder="mot de pass" class="form-control col-md-6" id="in" required="true"  /><br />
+  <input type="password" name="password2" placeholder="mot de pass (repetition)" class="form-control col-md-6" id="in" required="true" /><br />
+  <br />
+  <button type="submit" class="btn btn-primary col-md-6"> Inscription <span class="fa fa-user"></span></button>
+  <br /><br />
+  <a href="{{ path('dashroot') }}" class="btn btn-success col-md-6"> connexion <span class="fa fa-log-in"></span> </a>
+ </div>
+</form>
+</center>s
+{% endblock %}

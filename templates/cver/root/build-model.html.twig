@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Cree un modele!{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="../../css/skel.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../css/style-desktop.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock %}
+
+{% block javascripts %}
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.dropotron.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/skel-layers.min.js"></script>
+<script src="../../js/init.js"></script>
+{% endblock %}
+ {% set text1 = 'Vous etes sur le point de cree un nouveau modele de CV.' %}
+ {% set text2 = 'Lisez bien la notice avant de cree votre modele. '%}
+
+ {% block body %}
+    <div class="container">
+
+      <div class="col-md-3 pull-left" style="">
+      <div class="dash" style="background:white; padding:2%;">
+        <font><span class="fa fa-user"></span> {{app.user.prenom}}</font>
+
+      <div class="dash" style="border-left:5px solid red; background:white;  padding:2%; ">
+        <a href="{{path('app_logout')}}" style="color:red; hover{color:pink;}">Deconnexion</a>
+      </div>
+     </div>
+     </div>
+    </div>
+    <br /><br />
+    <div class="col-md-8 notice pull-right">
+      <div class="zone">
+
+       <h2>Notice:Convention pour ajouter des modeles a l'application</h2>
+       <p class="">
+          le code source de votre modele dans l'integralite, doit se tenir sur un seul fichier.
+          c'est a dire le code html et css (vous n'aurez pas besion de javascript).<br /><br />
+          vous allez dans un premier temps cree une apercu du modele et d'un second temps cree le build.
+          cree une apercu reviens a cree le CV integralement avec les valeurs par defaut. Cree le build c'est cree le meme cv mais remplacer les valeurs par defaut
+          par des blog de variable en langage twig. Nous allons nous servir de ces blogs de variable pour remplacer les valeurs par defaut par les valeurs des utilisateurs du modele
+          <br /><br />
+          Pour la creation du build,les blog de variable ne sont pas donner au hasard vous devez utiliser la liste des noms que nous allons vous donner plus bas
+          si vous ne nommez pas vos blogs ainsi, l'algorithme ne fonctionnera pas comme prevu et votre modele sera inutilisable.
+          La liste de ces nom sont: <b>block nomPrenom</b>,<b>block entete</b>,<b>block competence</b>,<b>block parcoursProf</b>(pour les parcours proffessionnelle), <b>description_respon</b>(pour la description des responsabilites),<b>block formation</b>,<b>block profilProf</b>(pour les profils proffessionnelle),<b>block photos</b>,<b></b>
+       </p>
+       <a href="{{ path('build_model_form') }}" class="btn btn-success btn-lg" style="color:white;" name="button">Compris et poursuivre <span class="fa fa-next"></span> </a>
+     </div>
+
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+ {% endblock %}

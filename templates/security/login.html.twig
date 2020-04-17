@@ -1,8 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Connectez-vous!{% endblock %}
-
+{% set text1 = "Vous essayer d acceder a une zone qui demande a etre authentifier"%}
+{% set text2 = "vous devez vous authentier pour y acceder. si vous n.avez pas une authentification, veillez quitter cette zone"%}
 {% block body %}
+<style>
+  a:hover{
+    color: gray;
+  }
+</style>
 <section class="box feature ">
     <style type="text/css">
        #inputEmail , #inputPassword {

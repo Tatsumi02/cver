@@ -1,0 +1,62 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %} Bienvenue sur votre dash {{app.user.prenom}}!{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="../../css/skel.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../css/style-desktop.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <style media="screen">
+   #op{
+     text-decoration: none;
+   }
+   #op:hover{
+     text-decoration: none;
+     font-size: 1.1em;
+     border: 2px solid rgb(50, 100, 4);
+     padding: 2%;
+     margin: 2%;
+     border-radius: 8px;
+   }
+   .dash{
+     border-left: 6px solid rgb(9, 99, 20);
+   }
+ </style>
+{% endblock %}
+
+
+{% block javascripts %}
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.dropotron.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/skel-layers.min.js"></script>
+<script src="../../js/init.js"></script>
+{% endblock %}
+
+{% set text1 = '... vous etes authentifier avec success' %}
+{% set text2 = 'vous pouvez cree et modifier des modeles de CV appartir d.ici'%}
+
+{% block body %}
+
+ <center class="col-md-12">
+   <div class="container">
+     <div class="col-md-8">
+       <h3><a href="{{ path('build_model') }}" id="op"><span class="fa fa-plus"></span> Ajouter un modele de CV maintenant </a></h3>
+         <br />
+       <h3><a href="#" id="op"><span class="fa fa-plus"></span> Modifier un modele de CV maintenant </a></h3>
+     </div>
+   </div>
+ </center>
+ <div class="col-md-3 pull-left">
+ <div class="dash" style="background:white; padding:2%;">
+   <font><span class="fa fa-user"></span> {{app.user.prenom}}</font>
+
+ <div class="dash" style="border-left:5px solid red; background:white;  padding:2%; ">
+   <a href="{{path('app_logout')}}" style="color:red; hover{color:pink;}">Deconnexion</a>
+ </div>
+</div>
+</div>
+<br /><br /><br />
+
+{% endblock %}

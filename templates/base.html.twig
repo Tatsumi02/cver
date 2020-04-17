@@ -4,9 +4,11 @@
 	<head>
 		<title>{% block title %}CV-builder{% endblock %}</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="icon" type="image/png" href="../../public/images/18-1586947107353.png" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		{% block javascripts %} {% endblock %}
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/jquery.dropotron.min.js"></script>
 		<script src="../js/skel.min.js"></script>
@@ -16,12 +18,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-       
+
 			   <link rel="stylesheet" href="../css/skel.css" />
 			   <link rel="stylesheet" href="../css/style.css" />
 			   <link rel="stylesheet" href="../css/style-desktop.css" />
 			   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	       <style type="text/css">
+
+				 <style type="text/css">
              a:hover{
                  	text-decoration:none;
                  	color: white;
@@ -31,27 +34,64 @@
              }
 	       </style>
 	{% block stylesheets %}{% endblock %}
-		
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
-	<body class="homepage">
-     
+	<body class="homepage" style="font-size:1em;">
 		<!-- Header -->
 			<div id="header-wrapper" style="margin-top:0%;">
 				<header id="header" class="container">
-				
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="{{ path('home') }}">Cver</a></h1>
-						</div>
-					
+
+<script>
+  $(function(){
+		var zchaine = document.querySelector('.zchaine');
+
+    var chaine = '{{ text1 }}';
+		var chaine2 = '{{ text2 }}';
+
+		var nb = chaine.length +1;
+		var nb2 = chaine2.length +1;
+		var i = -1;
+		var i2 = -1;
+		var currentTime = 5
+		var comp =setInterval(function(){
+       --nb;
+			 ++i;
+					if (nb > 0) {
+						zchaine.innerHTML += chaine[i];
+					}
+					if (nb == 0) {
+						zchaine.innerHTML = '';
+					}
+					if (nb<0) {
+						--nb2
+						 ++ i2;
+
+							if (nb2 > 0) {
+
+								zchaine.innerHTML +=  chaine2[i2];
+							}
+
+
+					}
+		},100);
+
+	})
+</script>
+					<!-- Logo
+						<div id="logo" class="col-md-4" style="margin:2%; border-bottom:3px solid rgb(55,155,255);">
+							<h1></h1>
+						</div> -->
+						<a href="{{ path('home') }}"> <img src="../../public/images/18-1586947107353.png" alt="" height="200px" width="200px"> </a>
+            <br />
+						>_ <div class="zchaine" style="display:inline;"></div>|
 					<!-- Nav -->
-						<nav id="nav" class="nav">
+						<nav id="nav" class="nav" style="background:rgb(0,3,2); margin:2%; padding:2px; border-radius:10px; border-bottom:3px solid rgb(55,155,255); border-right: 3px solid rgb(35,203,30); border-left:3px solid rgb(053,235,203); border-top:3px solid pink;" class="col-md-8">
 							<ul class="nav">
-								<li class="current">
+								<li class="">
 									<a href="{{ path('visualisation') }}" class="">votre cv</a>
 								</li>
-								<li class="">
+								<li class="" style="background:rgb(0,7,0);">
 									<a href="">CV</a>
 									<ul>
 										<li class="nav-item">
@@ -68,10 +108,10 @@
 										<li><a href="#">Modele de CV</a></li>
 									</ul>
 								</li>
-								<li><a href="#">Nous contacter</a></li>
+								<li><a href="#">Consulter un cv</a></li>
 							</ul>
 						</nav>
-					
+
 				</header>
 			</div>
 
@@ -81,9 +121,9 @@
 				<div id="banner" class="box"  style="background:url('../images/vendeuse-afro-americaine.jpg'); background-attachment: fixed; background-size: cover; margin:0%;">
 				<div style="color: gray;" class="">
                  <span style="text-align: center;">
-					<h2 style="padding:9px; margin:9px border-radius:9px;"><b style="color:blue; ">Créateur de CV en ligne </b></h2>
+					<h2 style="padding:9px; margin:9px; border-radius:9px;" id="logo"><b style="color:blue; ">Créateur de CV en ligne </b></h2>
                     <h3> Une utilisation simple et des modèles professionnels </h3>
-                 
+
                  <br /><br />
                  <div class="7u pull-center" style="margin-left:20%;">
                   <a href="{{ path('choix_model') }}" class="button big icon fa-arrow-circle-right nn" style="cursor:pointer;"  data-toggle="modal" data-target="#oMessagerie"> Crée mon cv </a>
@@ -95,13 +135,13 @@
 
 					<div class="row col-md-9">
 						<div class="7u" class="">
-							
+
 						</div>
 					</div>
 				</div>
 				</div>
 			</div>
-		
+
 
 <!-- boite de dialogue  -->
 <div class="modal fade" id="oMessagerie" tabindex="-1" role="dialog" aria-labelledby="oMessagerieLabel" aria-hidden="true">
@@ -137,19 +177,19 @@
 				<div class="container">
 					<div class="row">
 						<div class="4u">
-						
+
 							<!-- Box -->
 								<section class="box feature">
 									<a href="{{ path('choix_model') }}" class="image featured"><img src="../images/chap.jpg" alt="" height="500px" width="20px" /></a>
 									<div class="inner">
 										<header>
-											<h2>  <a href="{{ path('choix_model') }}" class="btn btn-primary btn-lg col-md-9"> choisi se modele </a> </h2>
+											<h2>  <a href="{{ path('choix_model') }}" class="btn btn-primary btn-lg col-md-9"> choisir ce modele </a> </h2>
 											<p>  </p>
 										</header>
 										<p>  </p>
 									</div>
 								</section>
-                     
+
 						</div>
 
 						<div class="4u">
@@ -158,7 +198,7 @@
 									<a href="{{ path('choix_model') }}" class="image featured"><img src="../images/kerge.jpg" alt=" " height="500px" /></a>
 									<div class="inner">
 										<header>
-											<h2> <a href="{{ path('choix_model') }}" class="btn btn-primary btn-lg col-md-9"> choisi se modele </a> </h2>
+											<h2> <a href="{{ path('choix_model') }}" class="btn btn-primary btn-lg col-md-9"> choisir ce modele </a> </h2>
 											<p> </p>
 										</header>
 										<p> </p>
@@ -167,13 +207,13 @@
 
 						</div>
 						<div class="4u">
-						
+
 							<!-- Box -->
 								<section class="box feature last">
 									<a href="{{ path('choix_model') }}" class="image featured"><img src="../images/cv.jpg" alt="" height="500px" /></a>
 									<div class="inner">
 										<header>
-											<h2> <a href="{{ path('choix_model') }}" class="btn btn-primary btn-lg col-md-9"> choisi se modele </a> </h2>
+											<h2> <a href="{{ path('choix_model') }}" class="btn btn-primary btn-lg col-md-9"> choisir ce modele </a> </h2>
 											<p> </p>
 										</header>
 										<p> </p>
@@ -190,7 +230,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="4u">
-						
+
 							<!-- Sidebar -->
 								<div id="sidebar">
 									<section class="widget thumbnails">
@@ -208,7 +248,7 @@
 										<a href="#" class="button icon fa-file-text-o">Voire les avis</a>
 									</section>
 								</div>
-						
+
 						</div>
 						<div class="8u important(collapse)">
 
@@ -233,7 +273,7 @@
 				<footer id="footer" class="container">
 					<div class="row">
 						<div class="3u">
-						
+
 							<!-- Links -->
 								<section class="widget links">
 									<h3>  </h3>
@@ -245,10 +285,10 @@
 										<li><a href="#">  </a></li>
 									</ul>
 								</section>
-						
+
 						</div>
 						<div class="3u">
-						
+
 							<!-- Links -->
 								<section class="widget links">
 									<h3> </h3>
@@ -260,10 +300,10 @@
 										<li><a href="#">  </a></li>
 									</ul>
 								</section>
-						
+
 						</div>
 						<div class="3u">
-						
+
 							<!-- Links -->
 								<section class="widget links">
 									<h3>  </h3>
@@ -275,12 +315,12 @@
 										<li><a href="#">  </a></li>
 									</ul>
 								</section>
-						
+
 						</div>
-						
+
 
 						<div class="3u">
-						
+
 							<!-- Contact -->
 								<section class="widget contact last">
 									<h3>Contactez-nous</h3>
@@ -295,7 +335,7 @@
 									Douala, Cameroun<br />
 									</p>
 								</section>
-						
+
 						</div>
 					</div>
 					<div class="row">
@@ -309,7 +349,7 @@
 					</div>
 				</footer>
 			</div>
-     
-      {% block javascripts %}{% endblock %}
+
+
 	</body>
 </html>

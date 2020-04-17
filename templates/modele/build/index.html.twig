@@ -12,11 +12,11 @@
   {% block competence %}
         {{ competences |nl2br }}
   {% endblock %}
-
+{#  #}
   {% block parcoursProf %}
        {{ intitule }} a
-       {{ ville }} 
-       du {{ date_debut }} au {{ date_fin }} 
+       {{ ville }}
+       du {{ date_debut }} au {{ date_fin }}
        chez {{ employeur }} dans le departement du {{ departement }} ou je  {{ travail_actu }}.
        <br />
        {{ description_respon |nl2br }}
@@ -30,3 +30,18 @@
   {%  block profilProf %}
           {{ profil_prof |nl2br }}
   {% endblock %}
+{%  block photos %}
+{{ pdp }}
+{% endblock %}
+
+{% block imprim %}
+  <a href="#" class="btn btn-success btn-lg pull-left" id="print" data-toggle="modal" data-target="#oMessagerie">
+    Imprimer le cv <span class="fas fa-print"></span></a>
+
+   <div class="pull-right">
+     <a href="#" class="btn btn-warning btn-sm">Modifier le cv</a>
+     <a href="#" class="btn btn-danger btn-sm" style="color:white;">Un probleme</a>
+
+     <a href="{{ path('home') }}" class="btn btn-primary btn-sm">Accuil <span class="fas fa-home"></span></a>
+  </div>
+{% endblock %}

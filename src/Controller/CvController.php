@@ -481,7 +481,8 @@ class CvController extends AbstractController
                 $em -> flush();
                // ... persist the $product variable or any other work
 
-               return $this->redirect($this->generateUrl('traitementFinal'));
+               //return $this->redirect($this->generateUrl('traitementFinal'));
+               return new Response('ajout de modele Bien effectuer pour :' . $userCurrent -> getNom());
            }
 
            return $this->render('cver/root/build-model-img.html.twig', [

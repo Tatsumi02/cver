@@ -18,27 +18,49 @@
  {% set text1 = 'Bien ici vous etes en supers utilisateur.' %}
  {% set text2 = 'vous pouvez cree des administrateurs sur cette plate-forme'%}
 {% block body %}
-<center>
-<form class="" method="post" action="{{ path('admin_save') }}">
+
+<div class="container">
+<div class="col-md-10 pull-right">
+
+<form class="col-md-10" method="post" action="{{ path('admin_save') }}"  style="float:right;" >
 
 
  <h2> Cree un compte administrateurs </h2>
 <br />
 
- <div class="col-md-12">
-  <input type="text" name="nom" placeholder="nom" class="form-control col-md-6" id="in" required="true" />
+ <div class="">
+  <input type="text" name="nom" placeholder="nom" class="form-control col-md-9" id="in" required="true" />
   <br />
-  <input type="text" name="prenom" placeholder="prenom" class="form-control col-md-6" id="in" required="true"  />
+  <input type="text" name="prenom" placeholder="prenom" class="form-control col-md-9" id="in" required="true"  />
   <br />
-  <input type="email" name="email" placeholder="email" class="form-control col-md-6" id="in" required="true" />
+  <input type="email" name="email" placeholder="email" class="form-control col-md-9" id="in" required="true" />
   <br />
-  <input type="password" name="password" placeholder="mot de pass" class="form-control col-md-6" id="in" required="true"  /><br />
-  <input type="password" name="password2" placeholder="mot de pass (repetition)" class="form-control col-md-6" id="in" required="true" /><br />
+  <input type="password" name="password" placeholder="mot de pass" class="form-control col-md-9" id="in" required="true"  /><br />
+  <input type="password" name="password2" placeholder="mot de pass (repetition)" class="form-control col-md-9" id="in" required="true" /><br />
   <br />
-  <button type="submit" class="btn btn-primary col-md-6"> Inscription <span class="fa fa-user"></span></button>
-  <br /><br />
-  <a href="{{ path('dashroot') }}" class="btn btn-success col-md-6"> connexion <span class="fa fa-log-in"></span> </a>
+  <button type="submit" class="btn btn-primary col-md-9"> Inscription <span class="fa fa-user"></span></button>
+
  </div>
 </form>
-</center>s
+</div>
+</div>
+
+<div class="col-md-14 pull-left">
+<div class="dash  pull-left " style="background:white; padding:2%;">
+  <font><span class="fa fa-user"></span> {{app.user.prenom}}</font>
+  <div class="dash" style="border-left:5px solid green; background:white;color: green; padding:2%; ">
+  {% for admin in admins %}
+    <br />  {{ admin.nom }}({{ admin.roles[0] }}) <a href="{{ path('del_admin',{id:admin.id}) }}" title="supprimer {{ admin.nom }} "> <span class="badge" style="background:black; color:white;">X</span> </a>
+  <hr />
+  {% endfor %}
+  </div>
+  <br />
+<div class="dash" style="border-left:5px solid red; background:white;  padding:2%; ">
+  <a href="{{path('app_logout')}}" style="color:red; hover{color:pink;}">Deconnexion</a>
+</div>
+</div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 {% endblock %}

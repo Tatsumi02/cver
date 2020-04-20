@@ -16,6 +16,9 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\CvController::index'], [], [['text', '/']], [], []],
+    'app_cv_initroot' => [[], ['_controller' => 'App\\Controller\\CvController::initRoot'], [], [['text', '/admin/init']], [], []],
+    'add_admin' => [[], ['_controller' => 'App\\Controller\\CvController::root'], [], [['text', '/add-admin']], [], []],
+    'del_admin' => [[], ['_controller' => 'App\\Controller\\CvController::delAdmin'], [], [['text', '/del-admin']], [], []],
     'dash' => [[], ['_controller' => 'App\\Controller\\CvController::dash'], [], [['text', '/user']], [], []],
     'modele' => [[], ['_controller' => 'App\\Controller\\CvController::modele'], [], [['text', '/modele']], [], []],
     'choix_model' => [[], ['_controller' => 'App\\Controller\\CvController::choixModele'], [], [['text', '/choix-modele']], [], []],
@@ -34,7 +37,6 @@ return [
     'build_model_form' => [[], ['_controller' => 'App\\Controller\\CvController::buildModelForm'], [], [['text', '/build-model-form']], [], []],
     'build_model_tempo' => [[], ['_controller' => 'App\\Controller\\CvController::teckFormTempo'], [], [['text', '/build-model-tempo']], [], []],
     'build_model_img' => [[], ['_controller' => 'App\\Controller\\CvController::buildModelImg'], [], [['text', '/build-model-img']], [], []],
-    'rootadd_admin' => [[], ['_controller' => 'App\\Controller\\CverController::root'], [], [['text', '/root/add-admin']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
 ];

@@ -240,7 +240,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t<div class=\"3u\">
 
 \t\t\t\t\t\t\t<!-- Contact -->
-\t\t\t\t\t\t\t\t<section class=\"widget contact last\">
+\t\t\t\t\t\t\t\t<section class=\"widget contact last col-md-18\">
 \t\t\t\t\t\t\t\t\t<h3>Contactez-nous</h3>
 \t\t\t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"#\" class=\"icon fa-twitter\"><span class=\"label\">Twitter</span></a></li>
@@ -872,7 +872,7 @@ class __TwigTemplate_673ac66f51df2a800dec9a5360f8c80dc15587b1ffc1305bfdd3fa7914e
 \t\t\t\t\t\t<div class=\"3u\">
 
 \t\t\t\t\t\t\t<!-- Contact -->
-\t\t\t\t\t\t\t\t<section class=\"widget contact last\">
+\t\t\t\t\t\t\t\t<section class=\"widget contact last col-md-18\">
 \t\t\t\t\t\t\t\t\t<h3>Contactez-nous</h3>
 \t\t\t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"#\" class=\"icon fa-twitter\"><span class=\"label\">Twitter</span></a></li>

@@ -36,6 +36,20 @@ class UserRepository extends ServiceEntityRepository
     }
     */
 
+    /**
+    * @return User[]
+    */
+    public function findUserToDel($id){
+      $em = $this -> getEntityManager();
+      $query = $em -> createQuery(
+        '
+             DELETE FROM App\Entity\User u WHERE u.id = :id
+        '
+        )-> setParameter('id',$id);
+
+        return $query -> getResult();
+    }
+
     /*
     public function findOneBySomeField($value): ?User
     {

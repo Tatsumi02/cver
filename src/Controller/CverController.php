@@ -20,12 +20,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
  */
 class CverController extends AbstractController
 {
-     /**
-      * @Route("/add-admin", name="add_admin")
-      */
-      public function root(){
-        return $this -> render('cver/root/save-root.html.twig');
-      }
+    
 
-      
 }

@@ -39,6 +39,57 @@ class CvController extends AbstractController
     }
 
     /**
+    *@Route("/admin/init")
+    */
+    public function initRoot(){
+      $user = new User(); //extentiation
+      $em = $this -> getDoctrine() -> getManager();
+
+      $user -> setNom('root');
+      $user -> setPrenom('root_user');
+      $user -> setEmail('root@root');
+      $user -> setPassword('root');
+      $user -> setRoles(['ROLE_ROOT']);
+
+  //sauvegarde des donnee dans la bdd
+      $em -> persist($user);
+      $em -> flush();
+
+      return $this -> redirectToRoute('add_admin');
+    }
+
+    /**
+    * Require ROLE_ROOT for only this controller method.
+    *
+    * @IsGranted("ROLE_ROOT")
+     * @Route("/add-admin", name="add_admin")
+     */
+     public function root(){
+
+       $userCurrent = $this -> getUser();
+       $repository = $this -> getDoctrine() -> getRepository(User::class);
+       $admin = $repository -> findAll();
+
+       return $this -> render('cver/root/save-root.html.twig',[
+         'admins' => $admin,
+       ]);
+     }
+
+     /**
+     * Require ROLE_ROOT for only this controller method.
+     *
+     * @IsGranted("ROLE_ROOT")
+      * @Route("/del-admin", name="del_admin")
+      */
+      public function delAdmin(Request $request){
+        $id = $request->get('id');
+        $user = $this -> getDoctrine() -> getRepository(User::class)
+        -> findUserToDel($id);
+
+         return $this -> redirectToRoute('add_admin');
+      }
+
+    /**
      * @Route("/user", name="dash")
      * Require ROLE_USER for only this controller method.
      *
@@ -481,8 +532,7 @@ class CvController extends AbstractController
                 $em -> flush();
                // ... persist the $product variable or any other work
 
-               //return $this->redirect($this->generateUrl('traitementFinal'));
-               return new Response('ajout de modele Bien effectuer pour :' . $userCurrent -> getNom());
+               return $this->redirect($this->generateUrl('traitementFinal'));
            }
 
            return $this->render('cver/root/build-model-img.html.twig', [
